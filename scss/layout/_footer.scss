@@ -1,0 +1,44 @@
+footer{
+    @include flex-row-wrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 25rem;
+    background-color: $backgroundGrey;
+    position: relative;
+    z-index: 4;
+    .navLogosDirecc{
+        @include flex(flex,column wrap);
+        align-items: start;
+        margin-left: 5rem;
+        gap: 2rem;
+        div:nth-child(3){
+                    p{
+                    color: white;
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    }
+                }
+            nav{
+                ul{
+                    @include flex-row-wrap;
+                    list-style: none;
+                    gap: 1.5rem;
+                        li{
+                            a{
+                        text-decoration: none;
+                        color: white;
+                        font-family: Poppins regular;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+        }
+    }
+    .redesSociales{
+        @include flex-row-wrap;
+        gap:2rem;
+        margin-right: 5rem;
+    }
+}

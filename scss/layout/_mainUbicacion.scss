@@ -1,0 +1,107 @@
+body{
+    .gridUbicacion{
+        display: grid;
+        width: 100%;
+        height: 100vh;      
+        grid-template-columns: 1fr;
+        grid-template-rows: 27rem 1027px 25rem;
+        grid-template-areas: 
+        "headerGenerico"
+        "mainUbicacion"   
+        "footerUbicacion";
+
+        .headerGenerico{
+            grid-area: headerGenerico;
+            width: 100%;
+            height: 27rem;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center; }
+
+                .mainUbicacion{
+                    grid-area: mainUbicacion;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    grid-template-rows: repeat(3,1fr);
+                    justify-content: center;
+                    gap: 1.5rem;
+                    padding: 2rem 0 0 0;
+                        .lineaEncabezadoGrid{ 
+                        grid-area: lineaEncabezadoGrid;
+                        grid-column-start: 1;
+                        grid-column-end: 4;
+                        grid-row: 1;   
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: start;
+                        position: relative;
+                        top: -2rem; 
+                        padding-right: 5rem;
+                        padding-left: 5rem;                  
+                        .lineaEncabezadoGrid hr{
+                        border-style: none;
+                        background-color: rgba(51, 44, 40, 1);
+                        height: 1px;                        
+                        align-self: center;}
+                    }
+                        .ubicacion{
+                        grid-area: ubicacion;
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        padding: 8rem 0 0 8rem;
+                        width: 47rem;
+                        .h2ubicacion{
+                            font-family: Titan One;
+                            font-size: 3rem;
+                            color: rgba(51, 44, 40, 1);
+                        }
+                        .textoUbicacion{
+                            padding-top: 1rem;
+                            width: 47rem;
+                            font-family: Poppins regular;
+                            font-size: 1.8rem;}
+                        }
+                        .horarios{
+                            grid-area: horarios;
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                            grid-row-start: 2;
+                            grid-row-end: 4;   
+                        }
+                        .mapa{
+                            grid-area: mapa;
+                            grid-column-start: 2;
+                            grid-column-end: 4;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                            padding: 8rem 0 8rem 0;  
+                        }
+
+                        
+                        .horarios{
+                            width:40rem;
+                            font-family: Poppins regular;
+                            font-size: 1.8rem;
+                            padding-left: 8rem;
+                            line-height: 4rem;
+                        }
+                        .horarios div ul{
+                            list-style: none;
+                        }
+                        .horarios div h4{
+                            font-family: Poppins extrabold;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    
+                .footerUbicacion{
+                    grid-area: footerUbicacion;
+                        
+                }
+            }
+        }
+    

@@ -12,61 +12,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Titan+One&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  
-  <header class="headerIndex">
-    <div class="logoIndex">
-      <img src="./assets/logos/LogoMimis.png" alt="Logo Mimi`s">
+<body>  
+  <header>
+    <div class="logoEslogan">
+        <div class="LogoMimis">
+            <img src="./assets/logos/LogoMimis.svg" alt="Logo Mimi`s">
+        </div>
+        <div class="eslogan">
+            <h1>El verdadero amor de tu vida</h1>
+        </div>
     </div>
-    <div class="eslogan">
-      <h1>El verdadero amor de tu vida</h1>
-    </div>
-    <nav>
-        <ul class="navegadorHeaderIndex">
-            <li class="ubicacionHeaderIndex"><a href="./pages/ubicacion.html">Ubicación</a></li>
-            <li><a href=""><img src="./assets/elementos/botonEspañol.png" alt="Español"></a></li>
-            <li><a href=""><img src="./assets/elementos/botonIngles.png" alt="Inglés"></a></li>
-            <li><a href=""><img src="./assets/elementos/botonFrances.png" alt="Francés"></a></li>
-        </ul>
-    </nav>    
+    <div class="menuHamburguesa"><a href=""><img src="./assets/elementos/menuHamburguesa.png" alt="Menú Desplegable"></a></div>
+    
+    <div class="navHeaderGenerico">
+      <nav>
+          <ul class="navPaginas">
+              <li><a href="./pages/ubicacion.html">Ubicación</a></li>              
+          </ul>
+      </nav>
+      <nav>
+      <ul class="navBanderitas">
+          <li><a href=""><img src="./assets/elementos/botonEspañol.svg" alt="Español"></a></li>
+          <li><a href=""><img src="./assets/elementos/botonIngles.svg" alt="Inglés"></a></li>
+          <li><a href=""><img src="./assets/elementos/botonFrances.svg" alt="Francés"></a></li>
+      </ul>
+    </nav> 
+  </div>       
   </header> 
 
-  <main class="main">
-    <section class="bloque1">
-      <div class="section1">
-        <div class="imgSection1">
-          <img src="./assets/imgIndex/imgSection1.png" alt="To Sit">
+  <main class="mainIndex">
+    <section class="bloque1">        
+        <img src="./assets/imgIndex/imgSection1.png" alt="To Sit">
+        
+        <div>          
+          <p>Para que disfrutes de la comodidad de nuestro local, escuches buena música y disfrutes de <em>los mejores gofres, crepes y cafés de Madrid.</em>
+          <br><b>¿Qué estás esperando?</b></p>          
+          <button class="buttonToSit"><a href="./pages/toSit.html">¡Descúbrelo!</a></button>            
         </div>
-        <div class="infoSection1">
-          <div class="textoSection1">
-            <p>Para que disfrutes de la comodidad de nuestro local, escuches buena música y disfrutes de <em>los mejores gofres, crepes y cafés de Madrid.</em>
-            <br><b>¿Qué estás esperando?</b></p>
-            </div>
-            <div>
-                <button class="buttonToSit"><a href="./pages/toSit.html">¡Descúbrelo!</a></button>
-            </div>
-        </div>
-      </div>
+      
     </section>      
     <div class="lineaIndex">
      <hr>
     </div>
       
     <section class="bloque2">          
-      <div class="section2">
-        <div class="infoSection2">
-          <div class="textoSection2">
-            <p>Gracias a nuestro nuevo formato <em>take away</em> acompañamos tu ritmo de vida, para que no te detengas, pero tampoco te pierdas de lo más delicioso de nuestro menú, y de, por supuesto, el mejor café.
-            <b>¡Pégate una vuelta!</b></p>
-          </div>
-          <div>
-            <button class="buttonToGo"><a href="./pages/toGo.html">¡Descúbrelo!</a></button>
-          </div>
-        </div> 
-            <div class="imgSection2">
-            <img src="./assets/imgIndex/imgSection2.png" alt="To Go">
-            </div>
+      <div>
+        <p>Gracias a nuestro nuevo formato <em>take away</em> acompañamos tu ritmo de vida, para que no te detengas, pero tampoco te pierdas de lo más delicioso de nuestro menú, y de, por supuesto, el mejor café.
+        <b>¡Pégate una vuelta!</b></p>
+      
+        <button class="buttonToGo"><a href="./pages/toGo.html">¡Descúbrelo!</a></button>
       </div>
+     
+      <img src="./assets/imgIndex/imgSection2.png" alt="To Go">
+                  
     </section>
       
     <div class="lineaIndex">
@@ -74,7 +72,7 @@
     </div>
       
     <section class="bloque3">
-      <div class="section3">
+      
         <div class="imgSection3">
           <img src="./assets/imgIndex/imgSection3.png" alt="Novedades Mimi´s"> 
         </div>
@@ -86,7 +84,7 @@
               <button class="buttonNovedades"><a href="./pages/novedades.html">Descubre lo nuevo</a></button>
              </div>
         </div>
-      </div>
+     
     </section>
       <div class="medioCirculo">
         <img src="./assets/elementos/circulo.png" alt="Fondo">
@@ -107,7 +105,7 @@
         </nav>
       </div>  
       <div>
-        <img src="./assets/logos/logosFooter.png"alt="Sponsors Mimi´s">
+        <img src="./assets/logos/logosFooter.svg"alt="Sponsors Mimi´s">
       </div>
       <div>
         <p><b>Mimi`s Crepería. Calle Postas 17, Madrid, España.</b> © 2023 Todos los derechos reservados.</p>
@@ -115,13 +113,13 @@
     </div>
     <div class="redesSociales">
       <div>
-        <a href="www.instagram.com/themimiscafe" target="_blank"><img src="assets/elementos/Instag.png" alt="Ir a Instagram"></a>
+        <a href="https://www.instagram.com/themimiscafe/" target="_blank"><img src="./assets/elementos/Instag.svg" alt="Ir a Instagram"></a>
       </div>
       <div>
-        <a href="www.tiktok.com/@mimiscreperie" target="_blank"><img src="assets/elementos/Tiktok.png" alt="Ir a Tiktok"></a>
+        <a href="https://www.tiktok.com/@mimiscreperie" target="_blank"><img src="./assets/elementos/Tiktok.svg" alt="Ir a Tiktok"></a>
       </div>
       <div class="TripAdvisor">
-        <img src="./assets/logos/TripAdvisor.png" alt="TripAdvisor 2022">
+        <img src="./assets/logos/TripAdvisor.svg" alt="TripAdvisor 2022">
       </div>
     </div>
   </footer>

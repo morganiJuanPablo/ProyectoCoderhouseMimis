@@ -1,0 +1,49 @@
+.headerIndex{
+    width: 100%;
+    height: 27rem;
+    display: flex;
+    flex-flow: row nowrap;    
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+
+        .logoIndex{
+            padding: 0 3rem 0 4rem;
+            }
+        .eslogan{
+        h1{
+            font-family: Titan One;
+            color:rgba(51, 44, 40, 1);
+            font-size: 3rem;
+            }}}
+nav{   
+    ul{
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        list-style: none;
+        text-decoration:none;
+        margin: 4rem 4rem;
+        
+        .ubicacionHeaderIndex{
+            padding-top: 0.5rem;
+            a{
+            font-size: 1.8rem;
+            font-family: Poppins semibold;
+            text-decoration:none;
+            color: rgba(51, 44, 40, 1); 
+            }  
+             a:hover{
+                color: rgba(165, 215, 213, 1)
+                }  
+            }
+        }
+    }
+
+}

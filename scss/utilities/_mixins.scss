@@ -1,0 +1,16 @@
+@mixin flex-row-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin estiloPaginasHeader{
+    font-size: 1.8rem;
+    font-family: Poppins semibold;
+    text-decoration: none;
+    color:rgba(51, 44, 40, 1);
+}
+@mixin flex ($display, $flex-flow){
+    display: $display;
+    flex-flow: $flex-flow;
+}

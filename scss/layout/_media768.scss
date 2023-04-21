@@ -1,0 +1,26 @@
+@media(max-width:768px){
+    main{
+        @include flex(flex,column nowrap);
+        width: 100%;
+        padding-bottom: 5rem;    
+            .galeriaToSit{
+                width: 100%;
+                max-width: 69rem;
+                min-width: 50rem;
+                justify-content: center;
+                margin: 5rem 0 0 0;                                    
+                } 
+            }
+    main{
+        @include flex(flex,column nowrap);
+        width: 100%;
+        padding-bottom: 5rem;    
+            .galeriaToGo{
+                width: 100%;
+                max-width: 69rem;
+                min-width: 50rem;
+                justify-content: center;
+                margin: 5rem 0 0 0;                                    
+                } 
+            }
+        }
