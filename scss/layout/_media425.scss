@@ -1,0 +1,109 @@
+@media(max-width:425px) {
+    main {
+        .galeriaToGo {
+            width: 30rem;
+            height: 100%;
+            margin: 3rem;
+            overflow: hidden;
+            display: block;
+
+            .hijoGaleriaToGo {
+                display: flex;
+                padding: 0;
+                animation: cambio 11s infinite alternate linear;
+                width: 500%;
+
+                li {
+                    width: 100%;
+                    list-style: none;
+
+                    img {
+                        width: 100%;
+
+
+                    }
+                }
+            }
+        }
+
+        .contenedorInfoToGo {
+            margin-right: 0;
+            margin-top: 3rem;
+            width: 100%;
+
+            .infoToGo {
+                justify-content: center;
+                width: 22rem;
+
+                div {
+                    img {
+                        width: 85%;
+                    }
+                }
+
+                .qrToGo {
+                    @include flex(flex, column nowrap);
+                    gap: 1rem;
+
+                    .textoQR {
+                        position: relative;
+                        left: -2rem;
+                    }
+                }
+            }
+        }
+
+        .galeriaToSit {
+            width: 30rem;
+            height: 100%;
+            margin: 3rem;
+            overflow: hidden;
+            display: block;
+
+            .hijoGaleriaToSit {
+                display: flex;
+                padding: 0;
+                animation: cambio 11s infinite alternate linear;
+                width: 500%;
+
+                li {
+                    width: 100%;
+                    list-style: none;
+
+                    img {
+                        width: 100%;
+
+
+                    }
+                }
+            }
+        }
+
+        .contenedorInfoToSit {
+            margin-right: 0;
+            margin-top: 3rem;
+            width: 100%;
+
+            .infoToSit {
+                justify-content: center;
+                width: 22rem;
+
+                div {
+                    img {
+                        width: 85%;
+                    }
+                }
+
+                .qrToSit {
+                    @include flex(flex, column nowrap);
+                    gap: 1rem;
+
+                    .textoQR {
+                        position: relative;
+                        left: -2rem;
+                    }
+                }
+            }
+        }
+    }
+}

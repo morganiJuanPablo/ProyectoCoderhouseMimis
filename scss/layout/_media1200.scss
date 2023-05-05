@@ -1,137 +1,304 @@
-@media(max-width:1200px){
-header{
-    div:first-child{
-        margin-left: 2rem;
-        .eslogan{
-            padding-left: 1rem;
-    }
-}
-    .menuHamburguesa{
-        display: flex;
-        margin: 0 5rem 0 5rem;
-    }
-    .navHeaderGenerico{
-        display: none;
-    }
-}
-/* *****************TO SIT**************************** */
+@media(max-width:1200px) {
+    .headerIndex {
+        div:first-child {
+            margin-left: 2rem;
+        }
 
-main{
-    @include flex(flex,column nowrap);
-    align-items: center;
-    width: 100%;
-    padding-bottom: 5rem;    
-        .galeriaToSit{
+        .menuHamburguesa {
+            display: flex;
+            margin: 0 5rem 0 5rem;
+        }
+
+        .navHeaderGenerico {
+            display: none;
+        }
+    }
+
+    .headerGenerico {
+        div:first-child {
+            margin-left: 2rem;
+        }
+
+        .menuHamburguesa {
+            display: flex;
+            margin: 0 5rem 0 5rem;
+        }
+
+        .navHeaderGenerico {
+            display: none;
+        }
+    }
+
+
+    /* *****************INDEX**************************** */
+
+    .mainIndex {
+        .lineaIndex {
+            @include flex-row-wrap;
+            position: absolute;
+            top: 55rem;
+            z-index: 4;
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            width: 93%;
+        }
+
+        .lineaIndex2 {
+            @include flex-row-wrap;
+            position: absolute;
+            top: 110rem;
+            z-index: 4;
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            width: 93%;
+        }
+    }
+
+    /* *****************TO SIT**************************** */
+
+    main {
+        @include flex(flex, column nowrap);
+        align-items: center;
+        width: 100%;
+        padding-bottom: 5rem;
+
+        .galeriaToSit {
             justify-content: center;
-            margin: 5rem 2rem 0 2rem; 
-                div{
-                    .fotosResponsive{
+            margin: 5rem 2rem 0 2rem;
+
+            div {
+                .fotosResponsive {
                     width: 100%;
                     max-width: 63rem;
                     min-width: 50rem;
                 }
-            }                                  
-        }    
-        .contenedorInfoToSit{
-            margin-right: 0;            
-            margin-top: 5rem;
-            width: 75%;
-            margin-bottom: 0;
-                .infoToSit{
-                    justify-content: center;
-                }
             }
         }
 
-/* *****************TO GO**************************** */
+        .contenedorInfoToSit {
+            margin-right: 0;
+            margin-top: 5rem;
+            width: 75%;
+            margin-bottom: 0;
 
-main{
-    @include flex(flex,column nowrap);
-    align-items: center;
-    width: 100%;
-    padding-bottom: 5rem;    
-        .galeriaToGo{
+            .infoToSit {
+                justify-content: center;
+            }
+        }
+    }
+
+    /* *****************TO GO**************************** */
+
+    main {
+        @include flex(flex, column nowrap);
+        align-items: center;
+        width: 100%;
+        padding-bottom: 5rem;
+
+        .galeriaToGo {
             justify-content: center;
-            margin: 5rem 2rem 0 2rem; 
-                div{
-                    .fotosResponsive{
+            margin: 5rem 2rem 0 2rem;
+            order: 1;
+
+            div {
+                .fotosResponsive {
                     width: 100%;
                     max-width: 63rem;
                     min-width: 50rem;
                 }
-            }                                  
-        }    
-        .contenedorInfoToGo{
-            margin-left: 0;            
-            margin-top: 5rem;
-            width: 75%;
-            margin-bottom: 0;
-                .infoToGo{
-                    justify-content: center;
-                }
             }
         }
 
+        .contenedorInfoToGo {
+            margin-left: 0;
+            margin-top: 5rem;
+            width: 75%;
+            margin-bottom: 0;
+            order: 2;
 
-/* *****************BOOTSTRAP**************************** */
+            .infoToGo {
+                justify-content: center;
+            }
+        }
+    }
 
-.mainNovedades{
-    padding: 0;
-        div{
-            div{
-                h2{
+
+    /* *****************BOOTSTRAP**************************** */
+
+    .mainNovedades {
+        padding: 0;
+
+        div {
+            div {
+                h2 {
                     padding-top: 2rem;
                 }
             }
 
         }
-     .fondoDeColorFormulario{
-        div{
-            .datosAllenar{
+
+        .fondoDeColorFormulario {
+            div {
+                .datosAllenar {
                     margin-right: 0;
-                    }
                 }
             }
         }
-    
-    
+    }
 
 
 
 
 
-/* *****************FOOTER**************************** */
-        
-    footer{
+
+
+    /* *****************FOOTER**************************** */
+
+    footer {
         width: 100%;
         height: 35rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: center; 
+        align-content: center;
         gap: 3rem;
-        .navLogosDirecc{
+
+        .navLogosDirecc {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 1rem 2rem 0 2rem;
             margin-left: 0;
-                div{
-                    p{
-                        text-align: center;
-                    }
+
+            div {
+                p {
+                    text-align: center;
                 }
+            }
         }
-        .redesSociales{
+
+        .redesSociales {
             margin-right: 0;
-         }
+        }
     }
 
-.mainIndex{
-    height: auto;
-section{
-    @include flex(flex, column nowrap);
-    height: auto;
+    .mainIndex {
+        height: auto;
+
+        section {
+            @include flex(flex, column nowrap);
+            height: auto;
+        }
+    }
+
+
+    /* *****************UBICACION**************************** */
+    body {
+        .gridUbicacion {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            grid-template-columns: 1fr;
+            grid-template-rows: 27rem 1090px 25rem;
+            grid-template-areas:
+                "headerGenerico"
+                "mainUbicacion"
+                "footerUbicacion";
+
+            .mainUbicacion {
+                grid-area: mainUbicacion;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1.5rem;
+                padding: 0;
+                grid-template-areas:
+                    "lineaEncabezadoGrid"
+                    "ubicacion"
+                    "horarios"
+                    "mapa";
+
+                .lineaEncabezadoGrid {
+                    grid-area: lineaEncabezadoGrid;
+                    grid-column-start: 1;
+                    grid-column-end: 6;
+                    grid-row: -7;
+                    @include flex-row-wrap;
+                    background-color: $backgroundGrey;
+                    height: 1px;
+                    width: 93%;
+                    margin: 0 auto;
+
+                }
+
+                .ubicacion {
+                    grid-area: ubicacion;
+                    grid-column-start: 2;
+                    grid-column-end: 5;
+                    grid-row: 1;
+                    width: 100%;
+                    padding-top: 0;
+
+
+                    .h2ubicacion {
+                        font-family: Titan One;
+                        font-size: 3rem;
+                        color: rgba(51, 44, 40, 1);
+                    }
+
+                    .textoUbicacion {
+                        padding-top: 1rem;
+                        width: 100%;
+                        font-family: Poppins regular;
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .horarios {
+                    grid-area: horarios;
+                    grid-column-start: 2;
+                    grid-column-end: 5;
+                    grid-row: -4;
+                    margin-bottom: 5rem;
+
+
+                }
+
+                .mapa {
+                    grid-area: mapa;
+                    grid-column-start: 2;
+                    grid-column-end: 5;
+                    grid-row-start: -3;
+                    grid-row-end: -1;
+                    width: 100%;
+                    min-width: 50%;
+                    height: 100%;
+                    padding: 0;
+                    padding-bottom: 5rem;
+
+
+                }
+
+                .horarios {
+                    width: 100%;
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    line-height: 4rem;
+                    padding: 0;
+
+                }
+
+                .horarios div ul {
+                    list-style: none;
+                }
+
+                .horarios div h4 {
+                    font-family: Poppins extrabold;
+                    font-size: 1.4rem;
+                }
+            }
         }
     }
 }

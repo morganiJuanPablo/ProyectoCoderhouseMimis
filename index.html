@@ -1,111 +1,165 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mimi`s</title>
-    <link rel="shortcut icon" href="./assets/logos/logoExplorador.png">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Titan+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inicio | Mimi`s</title>
+  <link rel="shortcut icon" href="./assets/logos/logoExplorador.png">
+
+  <meta name="keywords"
+    content="Crepes, Gofres, Waffles, Pancakes, Tortitas, Madrid, Plaza Mayor, Batidos, Helados, Take away, ">
+  <meta name="description"
+    content="Mimi´s abrió sus puertas en la primavera del 2007, y desde entonces muchas cosas han pasado y muchos amigos hemos conocido. Gracias a ellos y a nuestros agradecidos clientes seguimos aqui y esperamos que por mucho tiempo!">
+  <meta name="author" content="Juan Pablo Morgani">
+  <meta name="copyright" content="Mimi´s Crepería">
+
+  <meta property="og:title" content=Mimi`s Crepería>
+  <meta property="og:site_name" content=Mimi`s Crepería>
+  <meta property="og:url" content=https://morganijuanpablo.github.io/ProyectoCoderhouseMimis/index.html>
+  <meta property="og:description" content=El verdadero amor de tu vida es Mimi´s! Lo más ricos gofres, crepes y tortitas
+    de Madrid.>
+  <meta property="og:type" content=restaurant>
+  <meta property="og:image"
+    content=https://morganijuanpablo.github.io/Proyecto-Coderhouse-Mimis/assets/img/imagToGo.png>
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Titan+One&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>  
-  <header>
+<body>
+  <header class="headerIndex">
     <div class="logoEslogan">
-        <div class="LogoMimis">
-            <img src="./assets/logos/LogoMimis.svg" alt="Logo Mimi`s">
-        </div>
-        <div class="eslogan">
-            <h1>El verdadero amor de tu vida</h1>
-        </div>
+      <div class="LogoMimis">
+        <a href="./index.html"><img src="./assets/logos/LogoMimis.svg" alt="Logo Mimi`s"></a>
+      </div>
+      <div class="eslogan">
+        <h1>El verdadero amor de tu vida</h1>
+      </div>
     </div>
-    <div class="menuHamburguesa"><a href=""><img src="./assets/elementos/menuHamburguesa.png" alt="Menú Desplegable"></a></div>
-    
+
+    <div class="menuHamburguesa"><a href=""></a>
+      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"><img src="./assets/elementos/menuHamburguesa.png"
+          alt="Menú Desplegable"></button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navHeaderHamburguesa">
+            <nav>
+              <ul class="navPaginasHamburguesa">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./pages/toSit.html">ToSit</a></li>
+                <li><a href="./pages/toGo.html">ToGo</a></li>
+                <li><a href="./pages/novedades.html">Novedades</a></li>
+                <li><a href="./pages/ubicacion.html">Ubicación</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul class="navBanderitas">
+                <li><a href=""><img src="./assets/elementos/botonEspañol.svg" alt="Español"></a></li>
+                <li><a href=""><img src="./assets/elementos/botonIngles.svg" alt="Inglés"></a></li>
+                <li><a href=""><img src="./assets/elementos/botonFrances.svg" alt="Francés"></a></li>
+              </ul>
+            </nav>
+            <div class="lineaMenuHamburguesa"></div>
+            <div>
+              <b>Mimi`s Crepería. Madrid.</b><br>© 2023<br>Todos los derechos reservados.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="navHeaderGenerico">
       <nav>
-          <ul class="navPaginas">
-              <li><a href="./pages/ubicacion.html">Ubicación</a></li>              
-          </ul>
+        <ul class="navPaginas">
+          <li><a href="./pages/ubicacion.html">Ubicación</a></li>
+        </ul>
       </nav>
       <nav>
-      <ul class="navBanderitas">
+        <ul class="navBanderitas">
           <li><a href=""><img src="./assets/elementos/botonEspañol.svg" alt="Español"></a></li>
           <li><a href=""><img src="./assets/elementos/botonIngles.svg" alt="Inglés"></a></li>
           <li><a href=""><img src="./assets/elementos/botonFrances.svg" alt="Francés"></a></li>
-      </ul>
-    </nav> 
-  </div>       
-  </header> 
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="mainIndex">
-    <section class="bloque1">        
-        <img src="./assets/imgIndex/imgSection1.png" alt="To Sit">
-        
-        <div>          
-          <p>Para que disfrutes de la comodidad de nuestro local, escuches buena música y disfrutes de <em>los mejores gofres, crepes y cafés de Madrid.</em>
-          <br><b>¿Qué estás esperando?</b></p>          
-          <button class="buttonToSit"><a href="./pages/toSit.html">¡Descúbrelo!</a></button>            
-        </div>
-      
-    </section>      
-    <div class="lineaIndex">
-     <hr>
-    </div>
-      
-    <section class="bloque2">          
+    <section class="bloque1">
+
       <div>
-        <p>Gracias a nuestro nuevo formato <em>take away</em> acompañamos tu ritmo de vida, para que no te detengas, pero tampoco te pierdas de lo más delicioso de nuestro menú, y de, por supuesto, el mejor café.
-        <b>¡Pégate una vuelta!</b></p>
-      
+        <p>Para que disfrutes de la comodidad de nuestro local, escuches buena música y disfrutes de <em>los mejores
+            gofres, crepes y cafés de Madrid.</em>
+          <br><b>¿Qué estás esperando?</b>
+        </p>
+        <button class="buttonToSit"><a href="./pages/toSit.html">¡Descúbrelo!</a></button>
+      </div>
+      <img class="imgIndexToSit" src="./assets/imgIndex/imgSection1.png" alt="To Sit">
+
+    </section>
+    <div class="lineaIndex"></div>
+
+    <section class="bloque2">
+      <div>
+        <p>Gracias a nuestro nuevo formato <em>take away</em> acompañamos tu ritmo de vida, para que no te detengas,
+          pero tampoco te pierdas de lo más delicioso de nuestro menú, y de, por supuesto, el mejor café.
+          <b>¡Pégate una vuelta!</b>
+        </p>
         <button class="buttonToGo"><a href="./pages/toGo.html">¡Descúbrelo!</a></button>
       </div>
-     
+
       <img src="./assets/imgIndex/imgSection2.png" alt="To Go">
-                  
+
     </section>
-      
-    <div class="lineaIndex">
-     <hr>
-    </div>
-      
+
+    <div class="lineaIndex2"></div>
+
     <section class="bloque3">
-      
-        <div class="imgSection3">
-          <img src="./assets/imgIndex/imgSection3.png" alt="Novedades Mimi´s"> 
-        </div>
-        <div class="infoSection2">
-            <div class="textoSection3">
-            <p>Estamos en constante búsqueda de lo que más les gusta a nuestros clientes. Por eso siempre intentamos mejorar, no sólo nuestro servicio, sino también nuestras opciones de menú.</p>
-            </div>
-            <div>
-              <button class="buttonNovedades"><a href="./pages/novedades.html">Descubre lo nuevo</a></button>
-             </div>
-        </div>
-     
-    </section>
-      <div class="medioCirculo">
-        <img src="./assets/elementos/circulo.png" alt="Fondo">
+
+      <div class="imgSection3">
+        <img src="./assets/imgIndex/imgSection3.png" alt="Novedades Mimi´s">
       </div>
+      <div class="infoSection2">
+        <div class="textoSection3">
+          <p>Estamos en constante búsqueda de lo que más les gusta a nuestros clientes. Por eso siempre intentamos
+            mejorar, no sólo nuestro servicio, sino también nuestras opciones de menú.</p>
+        </div>
+        <div>
+          <button class="buttonNovedades"><a href="./pages/novedades.html">Descubre lo nuevo</a></button>
+        </div>
+      </div>
+
+    </section>
+    <div class="medioCirculo">
+      <img src="./assets/elementos/circulo.png" alt="Fondo">
+    </div>
   </main>
 
   <footer>
     <div class="navLogosDirecc">
       <div>
         <nav>
-            <ul class="navFooter">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="pages/toSit.html">To sit</a></li>
-                <li><a href="pages/toGo.html">To go</a></li>
-                <li><a href="./pages/novedades.html">Novedades</a></li>
-                <li><a href="./pages/ubicacion.html">Ubicación</a></li>
-            </ul>
+          <ul class="navFooter">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="pages/toSit.html">To sit</a></li>
+            <li><a href="pages/toGo.html">To go</a></li>
+            <li><a href="./pages/novedades.html">Novedades</a></li>
+            <li><a href="./pages/ubicacion.html">Ubicación</a></li>
+          </ul>
         </nav>
-      </div>  
+      </div>
       <div>
-        <img src="./assets/logos/logosFooter.svg"alt="Sponsors Mimi´s">
+        <img src="./assets/logos/logosFooter.svg" alt="Sponsors Mimi´s">
       </div>
       <div>
         <p><b>Mimi`s Crepería. Calle Postas 17, Madrid, España.</b> © 2023 Todos los derechos reservados.</p>
@@ -113,10 +167,12 @@
     </div>
     <div class="redesSociales">
       <div>
-        <a href="https://www.instagram.com/themimiscafe/" target="_blank"><img src="./assets/elementos/Instag.svg" alt="Ir a Instagram"></a>
+        <a href="https://www.instagram.com/themimiscafe/" target="_blank"><img src="./assets/elementos/Instag.svg"
+            alt="Ir a Instagram"></a>
       </div>
       <div>
-        <a href="https://www.tiktok.com/@mimiscreperie" target="_blank"><img src="./assets/elementos/Tiktok.svg" alt="Ir a Tiktok"></a>
+        <a href="https://www.tiktok.com/@mimiscreperie" target="_blank"><img src="./assets/elementos/Tiktok.svg"
+            alt="Ir a Tiktok"></a>
       </div>
       <div class="TripAdvisor">
         <img src="./assets/logos/TripAdvisor.svg" alt="TripAdvisor 2022">
@@ -124,5 +180,11 @@
     </div>
   </footer>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

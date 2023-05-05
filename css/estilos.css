@@ -17,38 +17,61 @@ html {
   align-content: center;
   justify-content: space-between;
 }
-.headerIndex div {
+.headerIndex .menuHamburguesa {
+  display: none;
+}
+.headerIndex div:first-child {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   align-items: center;
-  align-content: center;
+  gap: 1.5rem;
+  margin-left: 3rem;
 }
-.headerIndex div .logoIndex {
-  padding: 0 3rem 0 4rem;
-}
-.headerIndex div .eslogan h1 {
+.headerIndex div:first-child .eslogan h1 {
   font-family: Titan One;
   color: rgb(51, 44, 40);
-  font-size: 3rem;
+  font-size: 3.3rem;
+  padding-left: 2rem;
 }
-.headerIndex nav ul {
+.headerIndex div:first-child .logoMimis img {
+  width: 100%;
+  max-width: 17.2rem;
+  min-width: 15rem;
+  transition: 0.5s;
+}
+.headerIndex div:first-child .logoMimis img:hover {
+  cursor: pointer;
+  scale: 110%;
+  rotate: 5deg;
+}
+.headerIndex .navHeaderGenerico {
   display: flex;
-  flex-direction: row;
-  gap: 2.5rem;
+  flex-flow: row nowrap;
+  margin-right: 5rem;
+}
+.headerIndex .navHeaderGenerico nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   list-style: none;
-  text-decoration: none;
-  margin: 4rem 4rem;
+  margin: 0 1rem 0 2rem;
+  gap: 1.5rem;
 }
-.headerIndex nav ul .ubicacionHeaderIndex {
-  padding-top: 0.5rem;
+.headerIndex .navHeaderGenerico nav ul li {
+  font-size: 1.8rem;
+  font-family: Poppins semibold;
+  color: rgb(51, 44, 40);
 }
-.headerIndex nav ul .ubicacionHeaderIndex a {
+.headerIndex .navHeaderGenerico nav ul li a {
   font-size: 1.8rem;
   font-family: Poppins semibold;
   text-decoration: none;
   color: rgb(51, 44, 40);
+  flex-wrap: nowrap;
 }
-.headerIndex nav ul .ubicacionHeaderIndex a:hover {
+.headerIndex .navHeaderGenerico nav ul li a:hover {
   color: rgb(165, 215, 213);
 }
 
@@ -57,6 +80,7 @@ html {
   display: flex;
   flex-flow: column wrap;
   position: relative;
+  align-items: center;
   z-index: 2;
 }
 .mainIndex .bloque1 {
@@ -72,9 +96,14 @@ html {
   z-index: 6;
 }
 .mainIndex .bloque1 img {
+  order: 1;
   width: 100%;
   max-width: 75rem;
   min-width: 40rem;
+  transition: transform 0.3s ease-in-out;
+}
+.mainIndex .bloque1 div {
+  order: 2;
 }
 .mainIndex .bloque1 div p {
   font-family: Poppins regular;
@@ -97,6 +126,22 @@ html {
   text-decoration: none;
   color: white;
   font-size: 2.5rem;
+}
+.mainIndex .bloque1 div .buttonToSit .buttonToSit:hover + .imgIndexToSit {
+  transform: scale(1.1);
+}
+.mainIndex .lineaIndex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 61rem;
+  z-index: 4;
+  background-color: white;
+  height: 2px;
+  margin: 0;
+  width: 93%;
 }
 .mainIndex .bloque2 {
   display: flex;
@@ -137,19 +182,33 @@ html {
   color: white;
   font-size: 2.5rem;
 }
+.mainIndex .lineaIndex2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 110rem;
+  z-index: 4;
+  background-color: white;
+  height: 2px;
+  margin: 0;
+  width: 93%;
+}
 .mainIndex .bloque3 {
   display: flex;
   flex-flow: row nowrap;
   background-color: white;
+  border-radius: 5rem;
   padding: 5rem;
-  width: 100%;
+  width: 93%;
   height: 30rem;
-  justify-content: center;
-  align-items: center;
   gap: 4rem;
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
   margin-top: 6rem;
+  justify-content: center;
+  align-items: center;
   z-index: 6;
 }
 .mainIndex .bloque3 img {
@@ -184,7 +243,7 @@ html {
   display: none;
 }
 
-header {
+.headerGenerico {
   width: 100%;
   height: 27rem;
   display: flex;
@@ -193,33 +252,41 @@ header {
   align-content: center;
   justify-content: space-between;
 }
-header div:first-child {
+.headerGenerico div:first-child {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: 1.5rem;
   margin-left: 3rem;
 }
-header div:first-child .eslogan {
+.headerGenerico div:first-child .eslogan {
   font-family: Titan One;
   color: rgb(51, 44, 40);
-  font-size: 1.5rem;
   padding-left: 2rem;
 }
-header div:first-child .logoMimis img {
+.headerGenerico div:first-child .eslogan h1 {
+  font-size: 3.3rem;
+}
+.headerGenerico div:first-child .logoMimis img {
   width: 100%;
   max-width: 17.2rem;
-  min-width: 12rem;
+  min-width: 15rem;
+  transition: 0.5s;
 }
-header .menuHamburguesa {
+.headerGenerico div:first-child .logoMimis img:hover {
+  cursor: pointer;
+  scale: 110%;
+  rotate: 5deg;
+}
+.headerGenerico .menuHamburguesa {
   display: none;
 }
-header .navHeaderGenerico {
+.headerGenerico .navHeaderGenerico {
   display: flex;
   flex-flow: row nowrap;
   margin-right: 5rem;
 }
-header .navHeaderGenerico nav ul {
+.headerGenerico .navHeaderGenerico nav ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -229,19 +296,19 @@ header .navHeaderGenerico nav ul {
   margin: 0 1rem 0 2rem;
   gap: 1.5rem;
 }
-header .navHeaderGenerico nav ul li {
+.headerGenerico .navHeaderGenerico nav ul li {
   font-size: 1.8rem;
   font-family: Poppins semibold;
   color: rgb(51, 44, 40);
 }
-header .navHeaderGenerico nav ul li a {
+.headerGenerico .navHeaderGenerico nav ul li a {
   font-size: 1.8rem;
   font-family: Poppins semibold;
   text-decoration: none;
   color: rgb(51, 44, 40);
   flex-wrap: nowrap;
 }
-header .navHeaderGenerico nav ul li a:hover {
+.headerGenerico .navHeaderGenerico nav ul li a:hover {
   color: rgb(165, 215, 213);
 }
 
@@ -250,9 +317,7 @@ header .navHeaderGenerico nav ul li a:hover {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-}
-.lineaEncabezado hr {
-  border-style: none;
+  margin: 0 auto;
   background-color: rgb(51, 44, 40);
   height: 1px;
   width: 93%;
@@ -263,13 +328,26 @@ header .navHeaderGenerico nav ul li a:hover {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-}
-.lineaIndex hr {
   position: absolute;
+  top: 65rem;
   z-index: 4;
-  border-style: none;
   background-color: white;
-  height: 1.1px;
+  height: 2px;
+  margin: 0;
+  width: 93%;
+}
+
+.lineaIndex2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 110rem;
+  z-index: 4;
+  background-color: white;
+  height: 2px;
+  margin: 0;
   width: 93%;
 }
 
@@ -280,47 +358,95 @@ main {
   width: 100%;
 }
 main .galeriaToSit {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  margin: 5rem 5rem 5rem 8rem;
-  gap: 1rem;
+  max-width: 62.8rem;
+  min-width: 30rem;
+  height: 100%;
+  margin: 5rem;
+  overflow: hidden;
+  display: block;
 }
-main .contenedorInfoToSit {
+main .galeriaToSit .hijoGaleriaToSit {
+  display: flex;
+  padding: 0;
+  animation: cambio 10s infinite alternate linear;
+  width: 500%;
+}
+main .galeriaToSit .hijoGaleriaToSit li {
+  width: 100%;
+  list-style: none;
+}
+main .galeriaToSit .hijoGaleriaToSit li img {
+  width: 62.8rem;
+  height: 100%;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  40% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -200%;
+  }
+  60% {
+    margin-left: -200%;
+  }
+  65% {
+    margin-left: -300%;
+  }
+  80% {
+    margin-left: -300%;
+  }
+  85% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+.contenedorInfoToSit {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   max-width: 65rem;
   justify-content: space-between;
   align-items: center;
-  margin-right: 20rem;
+  margin-right: 15rem;
   margin-top: 8rem;
   margin-bottom: 5rem;
 }
-main .contenedorInfoToSit .infoToSit {
+.contenedorInfoToSit .infoToSit {
   width: 100%;
 }
-main .contenedorInfoToSit .infoToSit div .logoToSit {
+.contenedorInfoToSit .infoToSit div .logoToSit {
   margin-bottom: 3rem;
 }
-main .contenedorInfoToSit .infoToSit div p {
+.contenedorInfoToSit .infoToSit div p {
   font-family: Poppins regular;
   font-size: 1.8rem;
   margin-bottom: 5rem;
   width: 100%;
 }
-main .contenedorInfoToSit .qrToSit {
+.contenedorInfoToSit .qrToSit {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin-bottom: 3rem;
 }
-main .contenedorInfoToSit .qrToSit div .qr {
+.contenedorInfoToSit .qrToSit div .qr {
   width: 100%;
   min-width: 15rem;
   max-width: 18.5rem;
 }
-main .contenedorInfoToSit .qrToSit div h3 {
+.contenedorInfoToSit .qrToSit div h3 {
   font-family: Poppins extrabold;
   font-size: 1.8rem;
   padding-left: 3rem;
@@ -333,47 +459,95 @@ main {
   width: 100%;
 }
 main .galeriaToGo {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  margin: 5rem 8rem 5rem 5rem;
-  gap: 1rem;
+  max-width: 62.8rem;
+  min-width: 30rem;
+  height: 100%;
+  margin: 5rem;
+  overflow: hidden;
+  display: block;
 }
-main .contenedorInfoToGo {
+main .galeriaToGo .hijoGaleriaToGo {
+  display: flex;
+  padding: 0;
+  animation: cambio 10s infinite alternate linear;
+  width: 500%;
+}
+main .galeriaToGo .hijoGaleriaToGo li {
+  width: 100%;
+  list-style: none;
+}
+main .galeriaToGo .hijoGaleriaToGo li img {
+  width: 62.8rem;
+  height: 100%;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  40% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -200%;
+  }
+  60% {
+    margin-left: -200%;
+  }
+  65% {
+    margin-left: -300%;
+  }
+  80% {
+    margin-left: -300%;
+  }
+  85% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+.contenedorInfoToGo {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   max-width: 65rem;
   justify-content: space-between;
   align-items: center;
-  margin-left: 20rem;
+  margin-left: 15rem;
   margin-top: 8rem;
   margin-bottom: 5rem;
 }
-main .contenedorInfoToGo .infoToGo {
+.contenedorInfoToGo .infoToGo {
   width: 100%;
 }
-main .contenedorInfoToGo .infoToGo div .logoToGo {
+.contenedorInfoToGo .infoToGo div .logoToGo {
   margin-bottom: 3rem;
 }
-main .contenedorInfoToGo .infoToGo div p {
+.contenedorInfoToGo .infoToGo div p {
   font-family: Poppins regular;
   font-size: 1.8rem;
   margin-bottom: 5rem;
   width: 100%;
 }
-main .contenedorInfoToGo .qrToGo {
+.contenedorInfoToGo .qrToGo {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin-bottom: 3rem;
 }
-main .contenedorInfoToGo .qrToGo div .qr {
+.contenedorInfoToGo .qrToGo div .qr {
   width: 100%;
   min-width: 15rem;
   max-width: 18.5rem;
 }
-main .contenedorInfoToGo .qrToGo div h3 {
+.contenedorInfoToGo .qrToGo div h3 {
   font-family: Poppins extrabold;
   font-size: 1.8rem;
   padding-left: 3rem;
@@ -392,7 +566,7 @@ body .gridUbicacion .headerGenerico {
   width: 100%;
   height: 27rem;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   justify-items: center;
   align-items: center;
@@ -400,88 +574,85 @@ body .gridUbicacion .headerGenerico {
 body .gridUbicacion .mainUbicacion {
   grid-area: mainUbicacion;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
   gap: 1.5rem;
-  padding: 2rem 0 0 0;
 }
 body .gridUbicacion .mainUbicacion .lineaEncabezadoGrid {
   grid-area: lineaEncabezadoGrid;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 13;
   grid-row: 1;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: start;
-  position: relative;
-  top: -2rem;
-  padding-right: 5rem;
-  padding-left: 5rem;
-}
-body .gridUbicacion .mainUbicacion .lineaEncabezadoGrid .lineaEncabezadoGrid hr {
-  border-style: none;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(51, 44, 40);
   height: 1px;
-  align-self: center;
+  width: 93%;
+  margin: 0 auto;
 }
 body .gridUbicacion .mainUbicacion .ubicacion {
   grid-area: ubicacion;
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  padding: 8rem 0 0 8rem;
-  width: 47rem;
+  padding: 8rem 0 0 0;
+  width: 100%;
 }
-body .gridUbicacion .mainUbicacion .ubicacion .h2ubicacion {
+body .gridUbicacion .mainUbicacion .ubicacion .h2ubicacion h2 {
   font-family: Titan One;
-  font-size: 3rem;
+  font-size: 4rem;
   color: rgb(51, 44, 40);
 }
 body .gridUbicacion .mainUbicacion .ubicacion .textoUbicacion {
   padding-top: 1rem;
-  width: 47rem;
+  width: 100%;
   font-family: Poppins regular;
   font-size: 1.8rem;
 }
 body .gridUbicacion .mainUbicacion .horarios {
   grid-area: horarios;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
 }
 body .gridUbicacion .mainUbicacion .mapa {
   grid-area: mapa;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 11;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 4;
   padding: 8rem 0 8rem 0;
 }
 body .gridUbicacion .mainUbicacion .horarios {
   width: 40rem;
   font-family: Poppins regular;
   font-size: 1.8rem;
-  padding-left: 8rem;
   line-height: 4rem;
 }
 body .gridUbicacion .mainUbicacion .horarios div ul {
   list-style: none;
+  padding: 0;
 }
-body .gridUbicacion .mainUbicacion .horarios div h4 {
+body .gridUbicacion .mainUbicacion .horarios div h3 {
   font-family: Poppins extrabold;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 body .gridUbicacion .footerUbicacion {
   grid-area: footerUbicacion;
 }
 
+.mainNovedades {
+  padding: 0;
+  margin: 0;
+}
 .mainNovedades div img {
   padding-top: 5rem;
   width: 100%;
-  max-width: 134rem;
+  max-width: 118rem;
 }
 .mainNovedades div h2 {
   font-family: Titan One;
@@ -502,9 +673,11 @@ body .gridUbicacion .footerUbicacion {
   margin-top: 5rem;
   background-color: rgb(165, 215, 213);
   height: 45rem;
+  position: relative;
+  left: 0.7rem;
 }
 .mainNovedades .fondoDeColorFormulario div {
-  margin-right: 3rem;
+  margin-right: 5rem;
 }
 .mainNovedades .fondoDeColorFormulario div h2 {
   font-family: Titan One;
@@ -602,19 +775,185 @@ footer .redesSociales {
   margin-right: 5rem;
 }
 
+.headerIndex .menuHamburguesa .offcanvas-end {
+  background-color: rgb(51, 44, 40);
+  width: 30rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-header button {
+  scale: 150%;
+  background-color: rgb(165, 215, 213);
+  margin-top: 3rem;
+  border-radius: 5rem;
+  position: relative;
+  left: 3rem;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  position: relative;
+  right: 5rem;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa nav .navPaginasHamburguesa {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 3rem;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 1.8rem;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa nav .navPaginasHamburguesa li a {
+  font-size: 1.8rem;
+  font-family: Poppins semibold;
+  text-decoration: none;
+  color: white;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa nav .navBanderitas {
+  display: flex;
+  flex-flow: row wrap;
+  scale: 80%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0.5rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa .lineaMenuHamburguesa {
+  background-color: white;
+  height: 1px;
+  width: 80%;
+  position: relative;
+  left: 5rem;
+  top: 3rem;
+}
+.headerIndex .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa div {
+  font-size: 1.4rem;
+  font-family: Poppins regular;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  left: 5rem;
+  top: 3rem;
+  line-height: 2.5rem;
+}
+
+.headerGenerico .menuHamburguesa .offcanvas-end {
+  background-color: rgb(51, 44, 40);
+  width: 30rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-header button {
+  scale: 150%;
+  background-color: rgb(165, 215, 213);
+  margin-top: 3rem;
+  border-radius: 5rem;
+  position: relative;
+  left: 3rem;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  position: relative;
+  right: 5rem;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa nav .navPaginasHamburguesa {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 3rem;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 1.8rem;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa nav .navPaginasHamburguesa li a {
+  font-size: 1.8rem;
+  font-family: Poppins semibold;
+  text-decoration: none;
+  color: white;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa nav .navBanderitas {
+  display: flex;
+  flex-flow: row wrap;
+  scale: 80%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0.5rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa .lineaMenuHamburguesa {
+  background-color: white;
+  height: 1px;
+  width: 80%;
+  position: relative;
+  left: 5rem;
+  top: 3rem;
+}
+.headerGenerico .menuHamburguesa .offcanvas-end .offcanvas-body .navHeaderHamburguesa div {
+  font-size: 1.4rem;
+  font-family: Poppins regular;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  left: 5rem;
+  top: 3rem;
+  line-height: 2.5rem;
+}
+
 @media (max-width: 1200px) {
-  header div:first-child {
+  .headerIndex div:first-child {
     margin-left: 2rem;
   }
-  header div:first-child .eslogan {
-    padding-left: 1rem;
-  }
-  header .menuHamburguesa {
+  .headerIndex .menuHamburguesa {
     display: flex;
     margin: 0 5rem 0 5rem;
   }
-  header .navHeaderGenerico {
+  .headerIndex .navHeaderGenerico {
     display: none;
+  }
+  .headerGenerico div:first-child {
+    margin-left: 2rem;
+  }
+  .headerGenerico .menuHamburguesa {
+    display: flex;
+    margin: 0 5rem 0 5rem;
+  }
+  .headerGenerico .navHeaderGenerico {
+    display: none;
+  }
+  /* *****************INDEX**************************** */
+  .mainIndex .lineaIndex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 93%;
+  }
+  .mainIndex .lineaIndex2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 110rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 93%;
   }
   /* *****************TO SIT**************************** */
   main {
@@ -653,6 +992,7 @@ footer .redesSociales {
   main .galeriaToGo {
     justify-content: center;
     margin: 5rem 2rem 0 2rem;
+    order: 1;
   }
   main .galeriaToGo div .fotosResponsive {
     width: 100%;
@@ -664,6 +1004,7 @@ footer .redesSociales {
     margin-top: 5rem;
     width: 75%;
     margin-bottom: 0;
+    order: 2;
   }
   main .contenedorInfoToGo .infoToGo {
     justify-content: center;
@@ -709,6 +1050,90 @@ footer .redesSociales {
     flex-flow: column nowrap;
     height: auto;
   }
+  /* *****************UBICACION**************************** */
+  body .gridUbicacion {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 27rem 1090px 25rem;
+    grid-template-areas: "headerGenerico" "mainUbicacion" "footerUbicacion";
+  }
+  body .gridUbicacion .mainUbicacion {
+    grid-area: mainUbicacion;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0;
+    grid-template-areas: "lineaEncabezadoGrid" "ubicacion" "horarios" "mapa";
+  }
+  body .gridUbicacion .mainUbicacion .lineaEncabezadoGrid {
+    grid-area: lineaEncabezadoGrid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row: -7;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 44, 40);
+    height: 1px;
+    width: 93%;
+    margin: 0 auto;
+  }
+  body .gridUbicacion .mainUbicacion .ubicacion {
+    grid-area: ubicacion;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: 1;
+    width: 100%;
+    padding-top: 0;
+  }
+  body .gridUbicacion .mainUbicacion .ubicacion .h2ubicacion {
+    font-family: Titan One;
+    font-size: 3rem;
+    color: rgb(51, 44, 40);
+  }
+  body .gridUbicacion .mainUbicacion .ubicacion .textoUbicacion {
+    padding-top: 1rem;
+    width: 100%;
+    font-family: Poppins regular;
+    font-size: 1.8rem;
+  }
+  body .gridUbicacion .mainUbicacion .horarios {
+    grid-area: horarios;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: -4;
+    margin-bottom: 5rem;
+  }
+  body .gridUbicacion .mainUbicacion .mapa {
+    grid-area: mapa;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: -3;
+    grid-row-end: -1;
+    width: 100%;
+    min-width: 50%;
+    height: 100%;
+    padding: 0;
+    padding-bottom: 5rem;
+  }
+  body .gridUbicacion .mainUbicacion .horarios {
+    width: 100%;
+    font-family: Poppins regular;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    padding: 0;
+  }
+  body .gridUbicacion .mainUbicacion .horarios div ul {
+    list-style: none;
+  }
+  body .gridUbicacion .mainUbicacion .horarios div h4 {
+    font-family: Poppins extrabold;
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 1024px) {
   .mainIndex {
@@ -735,6 +1160,9 @@ footer .redesSociales {
     max-width: 70rem;
     min-width: 30rem;
   }
+  .mainIndex .bloque1 div {
+    margin-bottom: 2rem;
+  }
   .mainIndex .bloque1 div p {
     font-family: Poppins regular;
     font-size: 1.8rem;
@@ -749,7 +1177,7 @@ footer .redesSociales {
     align-items: center;
     border-radius: 3rem;
     border-style: none;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .mainIndex .bloque1 div .buttonToSit a {
     font-family: Titan One;
@@ -757,24 +1185,44 @@ footer .redesSociales {
     color: white;
     font-size: 2.5rem;
   }
+  .mainIndex .lineaIndex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 74rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 93%;
+  }
   .mainIndex .bloque2 {
     display: flex;
     flex-flow: column wrap;
     padding: 2rem;
     width: 100%;
-    height: auto;
+    height: 85rem;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 1rem;
     position: relative;
+    top: -3rem;
     z-index: 6;
   }
   .mainIndex .bloque2 img {
+    order: 1;
     position: relative;
-    top: -5rem;
+    top: -6rem;
     width: 100%;
     max-width: 70rem;
     min-width: 25rem;
+  }
+  .mainIndex .bloque2 div {
+    order: 2;
+    position: relative;
+    top: -3rem;
   }
   .mainIndex .bloque2 div p {
     font-family: Poppins regular;
@@ -799,13 +1247,26 @@ footer .redesSociales {
     color: white;
     font-size: 2.5rem;
   }
+  .mainIndex .lineaIndex2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 155rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 93%;
+  }
   .mainIndex .bloque3 {
     display: flex;
     flex-flow: column nowrap;
     background-color: white;
     padding: 5rem 0 25rem 0;
-    width: 100%;
-    height: 60rem;
+    width: 85%;
+    height: 65rem;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -841,20 +1302,69 @@ footer .redesSociales {
     color: white;
     font-size: 2rem;
   }
+  /* ***************************FOOTER***************************** */
+  footer {
+    height: 38rem;
+  }
 }
 @media (max-width: 768px) {
   main {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    justify-content: center;
     width: 100%;
-    padding-bottom: 5rem;
   }
   main .galeriaToSit {
+    width: 53rem;
+    height: 100%;
+    margin: 3rem;
+    overflow: hidden;
+    display: block;
+  }
+  main .galeriaToSit .hijoGaleriaToSit {
+    display: flex;
+    padding: 0;
+    animation: cambio 11s infinite alternate linear;
+    width: 500%;
+  }
+  main .galeriaToSit .hijoGaleriaToSit li {
     width: 100%;
-    max-width: 69rem;
-    min-width: 50rem;
-    justify-content: center;
-    margin: 5rem 0 0 0;
+    list-style: none;
+  }
+  main .galeriaToSit .hijoGaleriaToSit li img {
+    width: 100%;
+  }
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+    20% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: -100%;
+    }
+    40% {
+      margin-left: -100%;
+    }
+    45% {
+      margin-left: -200%;
+    }
+    60% {
+      margin-left: -200%;
+    }
+    65% {
+      margin-left: -300%;
+    }
+    80% {
+      margin-left: -300%;
+    }
+    85% {
+      margin-left: -400%;
+    }
+    100% {
+      margin-left: -400%;
+    }
   }
   main {
     display: flex;
@@ -863,11 +1373,259 @@ footer .redesSociales {
     padding-bottom: 5rem;
   }
   main .galeriaToGo {
+    width: 53rem;
+    height: 100%;
+    margin: 3rem;
+    overflow: hidden;
+    display: block;
+  }
+  main .galeriaToGo .hijoGaleriaToGo {
+    display: flex;
+    padding: 0;
+    animation: cambio 11s infinite alternate linear;
+    width: 500%;
+  }
+  main .galeriaToGo .hijoGaleriaToGo li {
     width: 100%;
-    max-width: 69rem;
-    min-width: 50rem;
+    list-style: none;
+  }
+  main .galeriaToGo .hijoGaleriaToGo li img {
+    width: 100%;
+  }
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+    20% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: -100%;
+    }
+    40% {
+      margin-left: -100%;
+    }
+    45% {
+      margin-left: -200%;
+    }
+    60% {
+      margin-left: -200%;
+    }
+    65% {
+      margin-left: -300%;
+    }
+    80% {
+      margin-left: -300%;
+    }
+    85% {
+      margin-left: -400%;
+    }
+    100% {
+      margin-left: -400%;
+    }
+  }
+  .lineaEncabezado {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    margin: 5rem 0 0 0;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(51, 44, 40);
+    height: 1px;
+    width: 93%;
+    position: relative;
+    top: -3rem;
+  }
+  /* ***************************FOOTER***************************** */
+  footer {
+    height: 42rem;
+  }
+  /* *****************UBICACION**************************** */
+  /* body {
+      .gridUbicacion {       
+          .mainUbicacion {
+              grid-area: mainUbicacion;
+              display: grid;
+              grid-template-columns: repeat(5, 1fr);
+              grid-template-rows: repeat(3, 1fr);
+              gap: 1.5rem;
+              padding: 0;
+              grid-template-areas:
+              "lineaEncabezadoGrid"
+              "ubicacion"
+              "horarios"
+              "mapa";
+  .mapa {
+      grid-area: mapa;
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: -4;
+      grid-row-end: -1;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      padding-bottom: 5rem;    
+
+  }}}} */
+  /* *****************INDEX**************************** */
+  .mainIndex .bloque1 {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 6;
+  }
+  .mainIndex .bloque1 img {
+    width: 100%;
+    max-width: 70rem;
+    min-width: 30rem;
+  }
+  .mainIndex .bloque1 div p {
+    font-family: Poppins regular;
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 45rem;
+  }
+  .mainIndex .bloque1 div .buttonToSit {
+    width: 25rem;
+    height: 5rem;
+    background-color: rgb(51, 44, 40);
+    text-align: center;
+    align-items: center;
+    border-radius: 3rem;
+    border-style: none;
+    margin-top: 2rem;
+  }
+  .mainIndex .bloque1 div .buttonToSit a {
+    font-family: Titan One;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+  }
+  .mainIndex .lineaIndex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 90%;
+  }
+  .mainIndex .bloque2 {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem;
+    width: 100%;
+    height: 85rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    top: -3rem;
+    z-index: 6;
+    margin: 0;
+  }
+  .mainIndex .bloque2 img {
+    order: 1;
+    position: relative;
+    top: -6rem;
+    width: 100%;
+    max-width: 70rem;
+    min-width: 25rem;
+  }
+  .mainIndex .bloque2 div {
+    order: 2;
+    position: relative;
+    top: -3rem;
+  }
+  .mainIndex .bloque2 div p {
+    font-family: Poppins regular;
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 45rem;
+    min-width: 20rem;
+  }
+  .mainIndex .bloque2 div .buttonToGo {
+    width: 25rem;
+    height: 5rem;
+    background-color: rgb(51, 44, 40);
+    text-align: center;
+    align-items: center;
+    border-radius: 3rem;
+    border-style: none;
+    margin-top: 3rem;
+  }
+  .mainIndex .bloque2 div .buttonToGo a {
+    font-family: Titan One;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+  }
+  .mainIndex .lineaIndex2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -8rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+  .mainIndex .bloque3 {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    padding: 2rem;
+    width: 85%;
+    height: 82rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 6;
+    margin: 0;
+  }
+  .mainIndex .bloque3 img {
+    padding-top: -10rem;
+    width: 100%;
+    max-width: 70rem;
+    min-width: 25rem;
+  }
+  .mainIndex .bloque3 div p {
+    font-family: Poppins regular;
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 45rem;
+    min-width: 20rem;
+  }
+  .mainIndex .bloque3 div .buttonNovedades {
+    width: 25rem;
+    height: 5rem;
+    background-color: rgb(51, 44, 40);
+    text-align: center;
+    align-items: center;
+    border-radius: 3rem;
+    border-style: none;
+    margin-top: 3rem;
+  }
+  .mainIndex .bloque3 div .buttonNovedades a {
+    font-family: Titan One;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
   }
 }
 @media (max-width: 576px) {
@@ -877,23 +1635,38 @@ footer .redesSociales {
   header .menuHamburguesa {
     margin: 4rem;
   }
+  .lineaEncabezado {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(51, 44, 40);
+    height: 1px;
+    width: 93%;
+    position: relative;
+    top: -2.5rem;
+  }
   /* ***************************TO SIT***************************** */
   main .galeriaToSit {
-    margin-top: 4rem;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 63rem;
-    min-width: 12rem;
+    width: 40rem;
+    height: 100%;
+    margin: 3rem;
+    overflow: hidden;
+    display: block;
   }
-  main .galeriaToSit div img {
-    width: 100%;
-    max-width: 2.2rem;
-    min-width: 1rem;
+  main .galeriaToSit .hijoGaleriaToSit {
+    display: flex;
+    padding: 0;
+    animation: cambio 11s infinite alternate linear;
+    width: 500%;
   }
-  main .galeriaToSit div .fotosResponsive {
+  main .galeriaToSit .hijoGaleriaToSit li {
     width: 100%;
-    max-width: 63rem;
-    min-width: 20rem;
+    list-style: none;
+  }
+  main .galeriaToSit .hijoGaleriaToSit li img {
+    width: 100%;
   }
   main .contenedorInfoToSit {
     margin-right: 0;
@@ -902,7 +1675,7 @@ footer .redesSociales {
   }
   main .contenedorInfoToSit .infoToSit {
     justify-content: center;
-    width: 22rem;
+    width: 25rem;
   }
   main .contenedorInfoToSit .infoToSit div img {
     width: 85%;
@@ -910,24 +1683,32 @@ footer .redesSociales {
   main .contenedorInfoToSit .infoToSit .qrToSit {
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
+  }
+  main .contenedorInfoToSit .infoToSit .qrToSit .textoQR {
+    position: relative;
+    left: -2rem;
   }
   /* ***************************TO GO***************************** */
   main .galeriaToGo {
-    margin-top: 4rem;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 63rem;
-    min-width: 12rem;
+    width: 40rem;
+    height: 100%;
+    margin: 3rem;
+    overflow: hidden;
+    display: block;
   }
-  main .galeriaToGo div img {
-    width: 100%;
-    max-width: 2.2rem;
-    min-width: 1rem;
+  main .galeriaToGo .hijoGaleriaToGo {
+    display: flex;
+    padding: 0;
+    animation: cambio 11s infinite alternate linear;
+    width: 500%;
   }
-  main .galeriaToGo div .fotosResponsive {
+  main .galeriaToGo .hijoGaleriaToGo li {
     width: 100%;
-    max-width: 63rem;
-    min-width: 20rem;
+    list-style: none;
+  }
+  main .galeriaToGo .hijoGaleriaToGo li img {
+    width: 100%;
   }
   main .contenedorInfoToGo {
     margin-right: 0;
@@ -936,7 +1717,7 @@ footer .redesSociales {
   }
   main .contenedorInfoToGo .infoToGo {
     justify-content: center;
-    width: 22rem;
+    width: 28rem;
   }
   main .contenedorInfoToGo .infoToGo div img {
     width: 85%;
@@ -944,10 +1725,15 @@ footer .redesSociales {
   main .contenedorInfoToGo .infoToGo .qrToGo {
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
+  }
+  main .contenedorInfoToGo .infoToGo .qrToGo .textoQR {
+    position: relative;
+    left: -2rem;
   }
   /* ***************************FOOTER***************************** */
   footer {
-    height: 38rem;
+    height: 39rem;
   }
   footer .navLogosDirecc {
     padding-top: 2rem;
@@ -989,17 +1775,45 @@ footer .redesSociales {
   .mainIndex {
     width: 100%;
   }
+  .mainIndex .lineaIndex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 90%;
+  }
+  .mainIndex .lineaIndex2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -12rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
   .mainIndex .bloque3 {
     display: flex;
     flex-flow: column nowrap;
     background-color: white;
     padding: 2rem;
-    width: 100%;
-    height: 50rem;
+    width: 90%;
+    height: 70rem;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     position: relative;
+    top: -5rem;
     z-index: 6;
   }
   .mainIndex .bloque3 img {
@@ -1007,7 +1821,7 @@ footer .redesSociales {
     top: -5rem;
     width: 100%;
     max-width: 70rem;
-    min-width: 20rem;
+    min-width: 33rem;
   }
   .mainIndex .bloque3 div p {
     position: relative;
@@ -1035,9 +1849,176 @@ footer .redesSociales {
     color: white;
     font-size: 2rem;
   }
+  .mainNovedades .fondoDeColorFormulario div {
+    width: 24rem;
+  }
+  /* ***************************UBICACION***************************** */
+  body .gridUbicacion {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 27rem 1200px 25rem;
+    grid-template-areas: "headerGenerico" "mainUbicacion" "footerUbicacion";
+  }
+  body .gridUbicacion .mainUbicacion {
+    grid-area: mainUbicacion;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0;
+    grid-template-areas: "lineaEncabezadoGrid" "ubicacion" "horarios" "mapa";
+  }
+  body .gridUbicacion .mainUbicacion .lineaEncabezadoGrid {
+    grid-area: lineaEncabezadoGrid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: -6;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 44, 40);
+    height: 1px;
+    width: 93%;
+    margin: 0 auto;
+  }
+  body .gridUbicacion .mainUbicacion .ubicacion {
+    grid-area: ubicacion;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+    width: 100%;
+    padding-top: 0;
+  }
+  body .gridUbicacion .mainUbicacion .ubicacion .h2ubicacion {
+    font-family: Titan One;
+    font-size: 3rem;
+    color: rgb(51, 44, 40);
+  }
+  body .gridUbicacion .mainUbicacion .ubicacion .textoUbicacion {
+    padding-top: 1rem;
+    width: 100%;
+    font-family: Poppins regular;
+    font-size: 1.8rem;
+  }
+  body .gridUbicacion .mainUbicacion .horarios {
+    grid-area: horarios;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: -4;
+    margin-bottom: 5rem;
+  }
+  body .gridUbicacion .mainUbicacion .mapa {
+    grid-area: mapa;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: -3;
+    grid-row-end: -1;
+    width: 100%;
+    min-width: 50%;
+    height: 100%;
+    padding: 0;
+    padding-bottom: 5rem;
+  }
+  body .gridUbicacion .mainUbicacion .horarios {
+    width: 100%;
+    font-family: Poppins regular;
+    font-size: 1.7rem;
+    line-height: 4rem;
+  }
+  body .gridUbicacion .mainUbicacion .horarios div ul {
+    list-style: none;
+  }
+  body .gridUbicacion .mainUbicacion .horarios div h4 {
+    font-family: Poppins extrabold;
+    font-size: 1.4rem;
+  }
 }
-.mainNovedades .fondoDeColorFormulario div {
-  width: 27rem;
+@media (max-width: 425px) {
+  main .galeriaToGo {
+    width: 30rem;
+    height: 100%;
+    margin: 3rem;
+    overflow: hidden;
+    display: block;
+  }
+  main .galeriaToGo .hijoGaleriaToGo {
+    display: flex;
+    padding: 0;
+    animation: cambio 11s infinite alternate linear;
+    width: 500%;
+  }
+  main .galeriaToGo .hijoGaleriaToGo li {
+    width: 100%;
+    list-style: none;
+  }
+  main .galeriaToGo .hijoGaleriaToGo li img {
+    width: 100%;
+  }
+  main .contenedorInfoToGo {
+    margin-right: 0;
+    margin-top: 3rem;
+    width: 100%;
+  }
+  main .contenedorInfoToGo .infoToGo {
+    justify-content: center;
+    width: 22rem;
+  }
+  main .contenedorInfoToGo .infoToGo div img {
+    width: 85%;
+  }
+  main .contenedorInfoToGo .infoToGo .qrToGo {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+  }
+  main .contenedorInfoToGo .infoToGo .qrToGo .textoQR {
+    position: relative;
+    left: -2rem;
+  }
+  main .galeriaToSit {
+    width: 30rem;
+    height: 100%;
+    margin: 3rem;
+    overflow: hidden;
+    display: block;
+  }
+  main .galeriaToSit .hijoGaleriaToSit {
+    display: flex;
+    padding: 0;
+    animation: cambio 11s infinite alternate linear;
+    width: 500%;
+  }
+  main .galeriaToSit .hijoGaleriaToSit li {
+    width: 100%;
+    list-style: none;
+  }
+  main .galeriaToSit .hijoGaleriaToSit li img {
+    width: 100%;
+  }
+  main .contenedorInfoToSit {
+    margin-right: 0;
+    margin-top: 3rem;
+    width: 100%;
+  }
+  main .contenedorInfoToSit .infoToSit {
+    justify-content: center;
+    width: 22rem;
+  }
+  main .contenedorInfoToSit .infoToSit div img {
+    width: 85%;
+  }
+  main .contenedorInfoToSit .infoToSit .qrToSit {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+  }
+  main .contenedorInfoToSit .infoToSit .qrToSit .textoQR {
+    position: relative;
+    left: -2rem;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

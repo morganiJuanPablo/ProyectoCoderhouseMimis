@@ -1,20 +1,28 @@
 .lineaEncabezado{
     @include flex-row-wrap;
-    hr{    
-    border-style: none;
-    background-color: rgba(51, 44, 40, 1);
-    height: 1px;
+    margin: 0 auto;       
+    background-color: $backgroundGrey;
+    height: 1px;    
     width: 93%;    
-    }
 }
 .lineaIndex{
-    @include flex-row-wrap;    
-    hr{ 
+    @include flex-row-wrap;
     position: absolute;
-    z-index: 4;    
-    border-style: none;
+    top: 65rem;
+    z-index: 4;
     background-color: white;
-    height: 1.1px;
+    height: 2px;
+    margin: 0;
     width: 93%;    
-    }
 }
+.lineaIndex2{
+    @include flex-row-wrap;
+    position: absolute;
+    top: 110rem;
+    z-index: 4;
+    background-color: white;
+    height: 2px;
+    margin: 0;
+    width: 93%;    
+}
+

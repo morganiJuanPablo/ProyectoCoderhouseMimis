@@ -1,97 +1,109 @@
-.mainNovedades{
-    div{
-        
-            img{            
-                    padding-top: 5rem;
-                    width: 100%;
-                    max-width: 134rem;     
-                }
-            
-            h2{
+.mainNovedades {
+    padding: 0;
+    margin: 0;
+
+    div {
+        img {
+            padding-top: 5rem;
+            width: 100%;
+            max-width: 118rem;
+        }
+
+        h2 {
             font-family: Titan One;
             font-size: 4rem;
             line-height: 4rem;
             padding-left: 3rem;
-            padding-top: 8rem; 
+            padding-top: 8rem;
         }
-        p{
+
+        p {
             max-width: 100%;
-            width: 40rem;   
+            width: 40rem;
             font-family: Poppins regular;
             font-size: 1.8rem;
-            padding-top: 3rem; 
+            padding-top: 3rem;
             padding-left: 3rem;
 
-            }
-        }        
-        .fondoDeColorFormulario{
-            margin-top: 5rem;
-            background-color: $backgroundBlue;
-            height: 45rem;
-            
-            div{
-                margin-right: 3rem;
-                h2{
-                    font-family: Titan One;
-                    font-size: 4.5rem;
-                    color:$backgroundGrey;
-                    padding: 0;
-                    
-                    
-                }
-                div{
-                    p{
-                        width: 35rem;
-                        font-family: Poppins regular;
-                        font-size: 1.8rem;
-                        margin-right: 5rem;
-                        padding: 0; 
-                    }
-                }
-            }
-            .datosAllenar{
-                padding-top: 2rem;
-                display: flex;
-                flex-direction: column;
-                font-family: Poppins regular;
-                font-size: 1.8rem;
-                margin-right: 5rem;
-                    input{
-                        width: 29rem;
-                        border:none;
-                        box-decoration-break: clone;
-                        border-bottom:1px solid rgba(51, 44, 40, 1);
-                        outline: 0;
-                        background-color: rgba(165, 215, 213, 1);
-                        font-family: Poppins regular;
-                        font-size: 2rem;
-                    }
-                    .submitNovedades{
-                        button{
-                            margin-top: 2rem;
-                            font-family: Titan One;
-                            font-size: 1.9rem;
-                            width: 23.5rem;
-                            height: 4rem;
-                            border-style: none;
-                            background-color: rgba(51, 44, 40, 1);
-                            border-radius: 4rem;
-                            color: white;
-                            cursor: pointer;
-                        }
+        }
+    }
 
-                    }
+    .fondoDeColorFormulario {
+        margin-top: 5rem;
+        background-color: $backgroundBlue;
+        height: 45rem;
+        position: relative;
+        left: .7rem;
+
+        div {
+            margin-right: 5rem;
+
+            h2 {
+                font-family: Titan One;
+                font-size: 4.5rem;
+                color: $backgroundGrey;
+                padding: 0;
+
+
+            }
+
+            div {
+                p {
+                    width: 35rem;
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    margin-right: 5rem;
+                    padding: 0;
+                }
+            }
+        }
+
+        .datosAllenar {
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            font-family: Poppins regular;
+            font-size: 1.8rem;
+            margin-right: 5rem;
+
+            input {
+                width: 29rem;
+                border: none;
+                box-decoration-break: clone;
+                border-bottom: 1px solid rgba(51, 44, 40, 1);
+                outline: 0;
+                background-color: rgba(165, 215, 213, 1);
+                font-family: Poppins regular;
+                font-size: 2rem;
+            }
+
+            .submitNovedades {
+                button {
+                    margin-top: 2rem;
+                    font-family: Titan One;
+                    font-size: 1.9rem;
+                    width: 23.5rem;
+                    height: 4rem;
+                    border-style: none;
+                    background-color: rgba(51, 44, 40, 1);
+                    border-radius: 4rem;
+                    color: white;
+                    cursor: pointer;
+                }
+
             }
         }
     }
-    footer{
-        div{
-            div{
-                nav{
-                    ul{
+}
+
+footer {
+    div {
+        div {
+            nav {
+                ul {
                     padding-left: 0;
-                    }                    
                 }
             }
         }
     }
+}

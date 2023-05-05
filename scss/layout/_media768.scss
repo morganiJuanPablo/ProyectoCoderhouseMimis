@@ -1,26 +1,370 @@
-@media(max-width:768px){
-    main{
-        @include flex(flex,column nowrap);
+@media(max-width:768px) {
+    main {
+        @include flex(flex, row nowrap);
+        justify-content: center;
         width: 100%;
-        padding-bottom: 5rem;    
-            .galeriaToSit{
-                width: 100%;
-                max-width: 69rem;
-                min-width: 50rem;
-                justify-content: center;
-                margin: 5rem 0 0 0;                                    
-                } 
-            }
-    main{
-        @include flex(flex,column nowrap);
-        width: 100%;
-        padding-bottom: 5rem;    
-            .galeriaToGo{
-                width: 100%;
-                max-width: 69rem;
-                min-width: 50rem;
-                justify-content: center;
-                margin: 5rem 0 0 0;                                    
-                } 
+
+        .galeriaToSit {
+            width: 53rem;
+            height: 100%;
+            margin: 3rem;
+            overflow: hidden;
+            display: block;
+
+            .hijoGaleriaToSit {
+                display: flex;
+                padding: 0;
+                animation: cambio 11s infinite alternate linear;
+                width: 500%;
+
+                li {
+                    width: 100%;
+                    list-style: none;
+
+                    img {
+                        width: 100%;
+
+
+                    }
+                }
             }
         }
+
+        @keyframes cambio {
+            0% {
+                margin-left: 0;
+            }
+
+            20% {
+                margin-left: 0;
+            }
+
+            25% {
+                margin-left: -100%;
+            }
+
+            40% {
+                margin-left: -100%;
+            }
+
+            45% {
+                margin-left: -200%;
+            }
+
+            60% {
+                margin-left: -200%;
+            }
+
+            65% {
+                margin-left: -300%;
+            }
+
+            80% {
+                margin-left: -300%;
+            }
+
+            85% {
+                margin-left: -400%;
+            }
+
+            100% {
+                margin-left: -400%;
+            }
+        }
+    }
+
+    main {
+        @include flex(flex, column nowrap);
+        width: 100%;
+        padding-bottom: 5rem;
+
+        .galeriaToGo {
+            width: 53rem;
+            height: 100%;
+            margin: 3rem;
+            overflow: hidden;
+            display: block;
+
+            .hijoGaleriaToGo {
+                display: flex;
+                padding: 0;
+                animation: cambio 11s infinite alternate linear;
+                width: 500%;
+
+                li {
+                    width: 100%;
+                    list-style: none;
+
+                    img {
+                        width: 100%;
+
+
+                    }
+                }
+            }
+        }
+
+        @keyframes cambio {
+            0% {
+                margin-left: 0;
+            }
+
+            20% {
+                margin-left: 0;
+            }
+
+            25% {
+                margin-left: -100%;
+            }
+
+            40% {
+                margin-left: -100%;
+            }
+
+            45% {
+                margin-left: -200%;
+            }
+
+            60% {
+                margin-left: -200%;
+            }
+
+            65% {
+                margin-left: -300%;
+            }
+
+            80% {
+                margin-left: -300%;
+            }
+
+            85% {
+                margin-left: -400%;
+            }
+
+            100% {
+                margin-left: -400%;
+            }
+        }
+    }
+
+    .lineaEncabezado {
+        @include flex-row-wrap;
+        margin: 0 auto;
+        background-color: $backgroundGrey;
+        height: 1px;
+        width: 93%;
+        position: relative;
+        top: -3rem;
+    }
+
+    /* ***************************FOOTER***************************** */
+    footer {
+        height: 42rem;
+    }
+
+    /* *****************UBICACION**************************** */
+    /* body {
+    .gridUbicacion {       
+        .mainUbicacion {
+            grid-area: mainUbicacion;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1.5rem;
+            padding: 0;
+            grid-template-areas:
+            "lineaEncabezadoGrid"
+            "ubicacion"
+            "horarios"
+            "mapa";
+.mapa {
+    grid-area: mapa;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: -4;
+    grid-row-end: -1;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-bottom: 5rem;    
+
+}}}} */
+
+
+
+    /* *****************INDEX**************************** */
+    .mainIndex {
+        .bloque1 {
+            @include flex(flex, column nowrap);
+            padding: 2rem;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            z-index: 6;
+
+            img {
+                width: 100%;
+                max-width: 70rem;
+                min-width: 30rem;
+            }
+
+            div {
+                p {
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 45rem;
+                }
+
+                .buttonToSit {
+                    width: 25rem;
+                    height: 5rem;
+                    background-color: rgba(51, 44, 40, 1);
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 3rem;
+                    border-style: none;
+                    margin-top: 2rem;
+
+                    a {
+                        font-family: Titan One;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .lineaIndex {
+            @include flex-row-wrap;
+            position: relative;
+            top: 1rem;
+            z-index: 4;
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            width: 90%;
+        }
+
+        .bloque2 {
+            @include flex(flex, column wrap);
+            padding: 2rem;
+            width: 100%;
+            height: 85rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            top: -3rem;
+            z-index: 6;
+            margin: 0;
+
+            img {
+                order: 1;
+                position: relative;
+                top: -6rem;
+                width: 100%;
+                max-width: 70rem;
+                min-width: 25rem;
+            }
+
+            div {
+                order: 2;
+                position: relative;
+                top: -3rem;
+
+                p {
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 45rem;
+                    min-width: 20rem;
+
+                }
+
+                .buttonToGo {
+                    width: 25rem;
+                    height: 5rem;
+                    background-color: rgba(51, 44, 40, 1);
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 3rem;
+                    border-style: none;
+                    margin-top: 3rem;
+
+                    a {
+                        font-family: Titan One;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .lineaIndex2 {
+            @include flex-row-wrap;
+            position: relative;
+            top: -8rem;
+            z-index: 4;
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            padding: 0;
+            width: 90%;
+        }
+
+        .bloque3 {
+            @include flex(flex, column nowrap);
+            background-color: white;
+            padding: 2rem;
+            width: 85%;
+            height: 82rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 6;
+            margin: 0;
+
+            img {
+                padding-top: -10rem;
+                width: 100%;
+                max-width: 70rem;
+                min-width: 25rem;
+            }
+
+            div {
+                p {
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 45rem;
+                    min-width: 20rem;
+                }
+
+                .buttonNovedades {
+                    width: 25rem;
+                    height: 5rem;
+                    background-color: rgba(51, 44, 40, 1);
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 3rem;
+                    border-style: none;
+                    margin-top: 3rem;
+
+                    a {
+                        font-family: Titan One;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

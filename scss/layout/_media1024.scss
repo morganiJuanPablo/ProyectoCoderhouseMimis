@@ -1,137 +1,185 @@
-@media(max-width:1024px){
-    .mainIndex{
+@media(max-width:1024px) {
+    .mainIndex {
         background-color: $backgroundBlue;
         @include flex(flex, column wrap);
         position: relative;
         z-index: 2;
-            
-        .bloque1{
+
+        .bloque1 {
             @include flex(flex, column nowrap);
             padding: 2rem;
-            width: 100%; 
+            width: 100%;
             height: auto;
             justify-content: center;
-            align-items: center;       
-            gap: 4rem;        
+            align-items: center;
+            gap: 4rem;
             position: relative;
             z-index: 6;
-                        img{
-                        width: 100%;
-                        max-width: 70rem;
-                        min-width: 30rem;                    
+
+            img {
+                width: 100%;
+                max-width: 70rem;
+                min-width: 30rem;
+            }
+
+            div {
+                margin-bottom: 2rem;
+
+                p {
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 45rem;
+                }
+
+                .buttonToSit {
+                    width: 25rem;
+                    height: 5rem;
+                    background-color: rgba(51, 44, 40, 1);
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 3rem;
+                    border-style: none;
+                    margin-top: 2rem;
+
+                    a {
+                        font-family: Titan One;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2.5rem;
                     }
-                div{
-                    p{
-                        font-family: Poppins regular;
-                        font-size: 1.8rem;
-                        width: 100%;
-                        max-width: 45rem;                    
-                    }               
-                    .buttonToSit{
-                            width: 25rem;
-                            height: 5rem;
-                            background-color:rgba(51, 44, 40, 1);
-                            text-align: center;
-                            align-items: center;
-                            border-radius: 3rem;
-                            border-style: none;
-                            margin-top: 3rem;
-                            a{
-                                font-family: Titan One;
-                                text-decoration: none;
-                                color: white;
-                                font-size: 2.5rem;
-                            }
-                    }
-                }    
-        }
-        .bloque2{
-            @include flex(flex, column wrap);
-            padding: 2rem;
-            width: 100%; 
-            height: auto;
-            justify-content: center;
-            align-items: center;       
-            gap: 4rem;        
-            position: relative;
-            z-index: 6;
-                        img{
-                        position: relative;
-                        top: -5rem;
-                        
-                        width: 100%;
-                        max-width: 70rem;
-                        min-width: 25rem;                    
-                    }
-                div{
-                    
-                    p{
-                        font-family: Poppins regular;
-                        font-size: 1.8rem;
-                        width: 100%;
-                        max-width: 45rem;
-                        min-width: 20rem;                    
-                    }               
-                    .buttonToGo{
-                            width: 25rem;
-                            height: 5rem;
-                            background-color:rgba(51, 44, 40, 1);
-                            text-align: center;
-                            align-items: center;
-                            border-radius: 3rem;
-                            border-style: none;
-                            margin-top: 3rem;
-                            a{
-                                font-family: Titan One;
-                                text-decoration: none;
-                                color: white;
-                                font-size: 2.5rem;
-                            }
-                    }
-                }    
-        }
-        .bloque3{
-            @include flex(flex, column nowrap);
-            background-color: white;
-            padding: 5rem 0 25rem 0;
-            width: 100%; 
-            height: 60rem;
-            justify-content: center;
-            align-items: center;       
-            gap: 1rem;        
-            position: relative;            
-            z-index: 6;
-                        img{
-                        padding-top: -10rem;
-                        width: 100%;
-                        max-width: 70rem;
-                        min-width: 25rem;                    
-                    }
-                div{
-                    p{
-                        font-family: Poppins regular;
-                        font-size: 1.8rem;
-                        width: 100%;
-                        max-width: 45rem;
-                        min-width: 20rem;                    
-                    }               
-                    .buttonNovedades{
-                            width: 25rem;
-                            height: 5rem;
-                            background-color:rgba(51, 44, 40, 1);
-                            text-align: center;
-                            align-items: center;
-                            border-radius: 3rem;
-                            border-style: none;
-                            margin-top: 3rem;
-                            a{
-                                font-family: Titan One;
-                                text-decoration: none;
-                                color: white;
-                                font-size: 2rem;
-                            }
-                        }
-                    }    
                 }
             }
         }
+
+        .lineaIndex {
+            @include flex-row-wrap;
+            position: absolute;
+            top: 74rem;
+            z-index: 4;
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            width: 93%;
+        }
+
+        .bloque2 {
+            @include flex(flex, column wrap);
+            padding: 2rem;
+            width: 100%;
+            height: 85rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            top: -3rem;
+            z-index: 6;
+
+            img {
+                order: 1;
+                position: relative;
+                top: -6rem;
+                width: 100%;
+                max-width: 70rem;
+                min-width: 25rem;
+            }
+
+            div {
+                order: 2;
+                position: relative;
+                top: -3rem;
+
+                p {
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 45rem;
+                    min-width: 20rem;
+
+                }
+
+                .buttonToGo {
+                    width: 25rem;
+                    height: 5rem;
+                    background-color: rgba(51, 44, 40, 1);
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 3rem;
+                    border-style: none;
+                    margin-top: 3rem;
+
+                    a {
+                        font-family: Titan One;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .lineaIndex2 {
+            @include flex-row-wrap;
+            position: absolute;
+            top: 155rem;
+            z-index: 4;
+            background-color: white;
+            height: 2px;
+            margin: 0;
+            width: 93%;
+        }
+
+        .bloque3 {
+            @include flex(flex, column nowrap);
+            background-color: white;
+            padding: 5rem 0 25rem 0;
+            width: 85%;
+            height: 65rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 6;
+
+            img {
+                padding-top: -10rem;
+                width: 100%;
+                max-width: 70rem;
+                min-width: 25rem;
+            }
+
+            div {
+                p {
+                    font-family: Poppins regular;
+                    font-size: 1.8rem;
+                    width: 100%;
+                    max-width: 45rem;
+                    min-width: 20rem;
+                }
+
+                .buttonNovedades {
+                    width: 25rem;
+                    height: 5rem;
+                    background-color: rgba(51, 44, 40, 1);
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 3rem;
+                    border-style: none;
+                    margin-top: 3rem;
+
+                    a {
+                        font-family: Titan One;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ***************************FOOTER***************************** */
+    footer {
+        height: 38rem;
+    }
+}

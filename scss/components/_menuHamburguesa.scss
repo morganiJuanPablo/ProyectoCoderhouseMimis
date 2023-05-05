@@ -1,0 +1,165 @@
+.headerIndex {
+    .menuHamburguesa {
+        .offcanvas-end {
+            background-color: $backgroundGrey;
+            width: 30rem;
+            @include flex (flex, column nowrap);
+
+            .offcanvas-header {
+                button {
+                    scale: 150%;
+                    background-color: $backgroundBlue;
+                    margin-top: 3rem;
+                    border-radius: 5rem;
+                    position: relative;
+                    left: 3rem;
+                }
+            }
+
+            .offcanvas-body {
+                .navHeaderHamburguesa {
+                    @include flex (flex, column wrap);
+                    margin: 0;
+                    position: relative;
+                    right: 5rem;
+
+                    nav {
+                        .navPaginasHamburguesa {
+                            @include flex (flex, column wrap);
+                            margin-top: 3rem;
+                            flex-wrap: nowrap;
+                            list-style: none;
+                            gap: 1.8rem;
+
+                            li {
+                                a {
+                                    font-size: 1.8rem;
+                                    font-family: Poppins semibold;
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    nav {
+                        .navBanderitas {
+                            @include flex (flex, row wrap);
+                            scale: 80%;
+                            padding: 0;
+                            margin: 0;
+                            position: relative;
+                            left: .5rem;
+                            gap: 1.5rem;
+                            margin-top: 2rem;
+                            list-style: none;
+                        }
+                    }
+
+                    .lineaMenuHamburguesa {
+                        background-color: white;
+                        height: 1px;
+                        width: 80%;
+                        position: relative;
+                        left: 5rem;
+                        top: 3rem;
+                    }
+
+                    div {
+                        font-size: 1.4rem;
+                        font-family: Poppins regular;
+                        text-decoration: none;
+                        color: white;
+                        position: relative;
+                        left: 5rem;
+                        top: 3rem;
+                        line-height: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.headerGenerico {
+    .menuHamburguesa {
+        .offcanvas-end {
+            background-color: $backgroundGrey;
+            width: 30rem;
+            @include flex (flex, column nowrap);
+
+            .offcanvas-header {
+                button {
+                    scale: 150%;
+                    background-color: $backgroundBlue;
+                    margin-top: 3rem;
+                    border-radius: 5rem;
+                    position: relative;
+                    left: 3rem;
+                }
+            }
+
+            .offcanvas-body {
+                .navHeaderHamburguesa {
+                    @include flex (flex, column wrap);
+                    margin: 0;
+                    position: relative;
+                    right: 5rem;
+
+                    nav {
+                        .navPaginasHamburguesa {
+                            @include flex (flex, column wrap);
+                            margin-top: 3rem;
+                            flex-wrap: nowrap;
+                            list-style: none;
+                            gap: 1.8rem;
+
+                            li {
+                                a {
+                                    font-size: 1.8rem;
+                                    font-family: Poppins semibold;
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    nav {
+                        .navBanderitas {
+                            @include flex (flex, row wrap);
+                            scale: 80%;
+                            padding: 0;
+                            margin: 0;
+                            position: relative;
+                            left: .5rem;
+                            gap: 1.5rem;
+                            margin-top: 2rem;
+                            list-style: none;
+                        }
+                    }
+
+                    .lineaMenuHamburguesa {
+                        background-color: white;
+                        height: 1px;
+                        width: 80%;
+                        position: relative;
+                        left: 5rem;
+                        top: 3rem;
+                    }
+
+                    div {
+                        font-size: 1.4rem;
+                        font-family: Poppins regular;
+                        text-decoration: none;
+                        color: white;
+                        position: relative;
+                        left: 5rem;
+                        top: 3rem;
+                        line-height: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
